@@ -4,7 +4,7 @@
   "description": "A starting project using typescript, react, tailwindcss, netlify, and vite.",
   "main": "index.js",
   "scripts": {
-    "build": "tsc && vite build",
+    "build": "node safelist.js && tsc && vite build",
     "serve": "vite preview",
     "start": "netlify dev",
     "dev": "node safelist.js && concurrently -n \"⚡️vite,👹tsc\" -c \"cyan,red\" \"vite\" \"tsc -w\""

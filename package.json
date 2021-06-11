@@ -7,15 +7,20 @@
     "build": "tsc && vite build",
     "serve": "vite preview",
     "start": "netlify dev",
-    "dev": "concurrently -n \"⚡️vite,👹tsc\" -c \"cyan,red\" \"vite\" \"tsc -w\""
+    "dev": "node safelist.js && concurrently -n \"⚡️vite,👹tsc\" -c \"cyan,red\" \"vite\" \"tsc -w\""
   },
   "dependencies": {
+    "color-namer": "^1.4.0",
     "concurrently": "^6.0.2",
     "react": "^17.0.0",
-    "react-dom": "^17.0.0"
+    "react-dom": "^17.0.0",
+    "tailwind-color-generator": "^1.0.1"
   },
   "devDependencies": {
+    "@iconify-icons/akar-icons": "^1.1.14",
+    "@iconify/react": "^1.1.4",
     "@netlify/functions": "^0.7.2",
+    "@types/babel__core": "^7.1.14",
     "@types/node": "^15.0.3",
     "@types/react": "^17.0.5",
     "@types/react-dom": "^17.0.0",
